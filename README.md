@@ -35,7 +35,7 @@ Cada projeto referencia o respetivo `.proto` no `.csproj`, permitindo a geraçã
 
 Numa consola separada:
 
-```bash
+
 git clone https://github.com/AndreMacielSousa/VotingMock.git
 cd VotingMock
 dotnet run
