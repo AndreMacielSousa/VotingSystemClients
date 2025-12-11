@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package voting;
+
+service VotingService {
+  rpc GetCandidates (GetCandidatesRequest)
+      returns (GetCandidatesResponse);
+
+  rpc Vote (VoteRequest)
+      returns (VoteResponse);
+}
+
+message GetCandidatesRequest {}
+
+message Candidate {
+  int32 id = 1;
+  string name = 2;
+}
+
+message GetCandidatesResponse {
+  repeated Candidate candidates = 1;
+}
+
+message VoteRequest {
+  string voting_credential = 1;
+  int32 candidate_id = 2;
+}
+
+
+message VoteResponse {
+  bool success = 1;
+  string message = 2;
+}

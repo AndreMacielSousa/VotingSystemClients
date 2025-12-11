@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package voting;
+
+service VoterRegistrationService {
+  rpc IssueVotingCredential (IssueVotingCredentialRequest)
+      returns (IssueVotingCredentialResponse);
+}
+
+message IssueVotingCredentialRequest {
+  string citizen_card_number = 1;
+}
+
+message IssueVotingCredentialResponse {
+  string voting_credential = 1;
+  string message = 2;
+}

@@ -1,0 +1,2 @@
+obj\Debug\net8.0/Voting.cs \
+obj\Debug\net8.0/VotingGrpc.cs: ../Protos/voting.proto
